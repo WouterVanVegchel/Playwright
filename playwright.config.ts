@@ -7,7 +7,14 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 500,
   },
+  forbidOnly: !!process.env.CI,
   reporter: "html",
+  use: {
+    ignoreHTTPSErrors: true,
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
+    trace: "retain-on-failure",
+  },
   projects: [
     {
       name: "chromium",
