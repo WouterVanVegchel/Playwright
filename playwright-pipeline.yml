@@ -1,0 +1,21 @@
+trigger:
+  - main
+
+name: Playwright
+
+pool:
+  name: "Ubuntu"
+
+container: mcr.microsoft.com/playwright:bionic
+
+steps:
+  - task: Npm@1
+    displayName: "npm install"
+    inputs:
+      command: "ci"
+
+  - task: Npm@1
+    inputs:
+      command: custom
+      customCommand: "npx Playwright install"
+  - script: npm run test
