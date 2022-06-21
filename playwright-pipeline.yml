@@ -4,7 +4,7 @@ trigger:
 name: Playwright
 
 pool:
-  vmImage: "ubuntu-20.04"
+  name: "Scale Set Build Agents"
 
 container: mcr.microsoft.com/playwright:bionic
 
