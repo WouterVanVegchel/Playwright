@@ -4,7 +4,7 @@ trigger:
 name: Playwright
 
 pool:
-  name: "Ubuntu"
+  vmImage: "ubuntu-20.04"
 
 container: mcr.microsoft.com/playwright:bionic
 
