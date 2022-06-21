@@ -17,5 +17,6 @@ steps:
   - task: Npm@1
     inputs:
       command: custom
-      customCommand: "npx Playwright install"
-  - script: npm run test
+      customCommand: "run install:playwright"
+  - script: |
+      npm run test:e2e -- --project chromium
