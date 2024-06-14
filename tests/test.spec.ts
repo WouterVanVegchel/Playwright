@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const password = "test123";
+const password = "d0gsaremybestfr13nds_378";
 
 test("Dummy", async () => {
   console.log("Start the test =>", password);
